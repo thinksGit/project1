@@ -1,7 +1,9 @@
 const express = require('express');
 const http = require('http');
 var app = express();
-app.get('/', function (req, res) {
+app.use("/static", express.static('../public'))
+app.use('/', function (req, res) {
+  console.log("ssss");
   res.send('Hello World!');
 });
 
